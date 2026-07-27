@@ -1,0 +1,41 @@
+Proceso SistemaFacturacion
+
+    Definir precio, subtotal, descuento, total, iva, totalPagar Como Real
+    Definir cantidad Como Entero
+
+    total <- 0
+
+    Hacer
+
+        Escribir "Ingrese el precio del producto (0 para finalizar): "
+        Leer precio
+
+        Si precio <> 0 Entonces
+
+            Escribir "Ingrese la cantidad comprada: "
+            Leer cantidad
+
+            subtotal <- precio * cantidad
+
+            Si subtotal > 100000 Entonces
+                descuento <- subtotal * 0.10
+                subtotal <- subtotal - descuento
+                Escribir "Se aplicó un descuento del 10%."
+            FinSi
+
+            total <- total + subtotal
+
+        FinSi
+
+    Mientras Que precio <> 0
+
+    iva <- total * 0.19
+    totalPagar <- total + iva
+
+    Escribir "----------------------------"
+    Escribir "Total acumulado: $", total
+    Escribir "IVA (19%): $", iva
+    Escribir "Valor final a pagar: $", totalPagar
+    Escribir "----------------------------"
+
+FinProceso
