@@ -1,0 +1,33 @@
+Algoritmo ControlDePiezas
+
+    Definir peso, opcion, aceptadas, rechazadas, total Como Entero
+
+    aceptadas <- 0
+    rechazadas <- 0
+    total <- 0
+    opcion <- 1
+
+    Hacer
+        Escribir "Ingrese el peso de la pieza (g):"
+        Leer peso
+
+        Si peso >= 45 Y peso <= 55 Entonces
+            Escribir "Aceptada"
+            aceptadas <- aceptadas + 1
+        SiNo
+            Escribir "Rechazada"
+            rechazadas <- rechazadas + 1
+        FinSi
+
+        total <- total + 1
+
+        Escribir "¿Procesar otra pieza? (1 = Si, 0 = No):"
+        Leer opcion
+
+    Mientras Que opcion = 1
+
+    Escribir "Total de piezas procesadas: ", total
+    Escribir "Total de aceptadas: ", aceptadas
+    Escribir "Total de rechazadas: ", rechazadas
+
+FinAlgoritmo
