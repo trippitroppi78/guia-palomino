@@ -1,0 +1,40 @@
+Proceso RegistroCalificaciones
+
+    Definir nota, suma, promedio, porcentaje Como Real
+    Definir aprobados, reprobados, total, op Como Entero
+
+    Hacer
+
+        Escribir "Ingrese la nota:"
+        Leer nota
+
+        Si nota >= 0 Y nota <= 5 Entonces
+
+            suma <- suma + nota
+            total <- total + 1
+
+            Si nota >= 3 Entonces
+                aprobados <- aprobados + 1
+            SiNo
+                reprobados <- reprobados + 1
+            FinSi
+
+        SiNo
+            Escribir "Nota no válida."
+        FinSi
+
+        Escribir "¿Ingresar otra nota? (1=Si, 0=No)"
+        Leer op
+
+    Mientras Que op = 1
+
+    Si total > 0 Entonces
+        promedio <- suma / total
+        porcentaje <- (aprobados * 100) / total
+
+        Escribir "Total: ", total
+        Escribir "Aprobados: ", porcentaje, "%"
+        Escribir "Promedio: ", promedio
+    FinSi
+
+FinProceso
