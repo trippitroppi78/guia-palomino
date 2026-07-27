@@ -1,0 +1,25 @@
+Algoritmo AccesoBrazoRobotico
+
+    Definir clave, claveIngresada, intentos Como Entero
+
+    clave <- 1234
+    intentos <- 0
+
+    Hacer
+        Escribir "Ingrese la clave:"
+        Leer claveIngresada
+
+        Si claveIngresada = clave Entonces
+            Escribir "Acceso Concedido. Inicializando rutina del brazo robótico"
+        SiNo
+            intentos <- intentos + 1
+            Escribir "Clave incorrecta"
+        FinSi
+
+    Mientras Que claveIngresada <> clave Y intentos < 3
+
+    Si claveIngresada <> clave Entonces
+        Escribir "ALERTA: Número máximo de intentos alcanzado. SISTEMA BLOQUEADO"
+    FinSi
+
+FinAlgoritmo
