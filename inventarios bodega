@@ -1,0 +1,29 @@
+Algoritmo ControlDeStock
+
+    Definir stock, retirar Como Entero
+
+    Escribir "Ingrese el stock inicial:"
+    Leer stock
+
+    Hacer
+        Escribir "Cantidad a retirar (0 para salir):"
+        Leer retirar
+
+        Si retirar = 0 Entonces
+            Escribir "Programa finalizado."
+        SiNo
+            Si retirar > stock Entonces
+                Escribir "Stock insuficiente. Disponible: ", stock, " unidades"
+            SiNo
+                stock <- stock - retirar
+                Escribir "Nuevo saldo: ", stock, " unidades"
+            FinSi
+        FinSi
+
+    Mientras Que stock > 0 Y retirar <> 0
+
+    Si stock = 0 Entonces
+        Escribir "El stock se ha agotado."
+    FinSi
+
+FinAlgoritmo
