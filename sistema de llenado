@@ -1,0 +1,20 @@
+Algoritmo LlenadoTanque
+
+    Definir nivel, ingreso Como Entero
+
+    Escribir "Ingrese el nivel inicial del tanque (litros):"
+    Leer nivel
+
+    Hacer
+        Escribir "Litros ingresados:"
+        Leer ingreso
+
+        nivel <- nivel + ingreso
+        Escribir "Nivel actual: ", nivel, " litros"
+
+    Mientras Que nivel < 100
+
+    Escribir "¡TANQUE LLENO! Desconectando bomba"
+    Escribir "Nivel final: ", nivel, " litros"
+
+FinAlgoritmo
